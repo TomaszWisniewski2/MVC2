@@ -1,0 +1,60 @@
+﻿@model WebApplication5.Models.Calc
+@{ ViewBag.Title = "Index"; }
+
+<html>
+<div style="        background-image: url(../../Content/NewFolder1/pola-figur.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: 300px;
+">
+    <div style="        background-image: url(../../Content/NewFolder1/car2.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 10%;
+        background-position: 30px;
+">
+        <head>
+        </head>
+        <body>
+            <h2>Pole Marchewek</h2>
+
+            <div class="row">
+                @using (Html.BeginForm("/Index", "calc", FormMethod.Post))
+                {
+
+                    <div class="form-group">
+                        <label for="no1">a-----r-----e</label>
+                        <input type="text" class="form-control" id="no1" name="no1" value="@Model.no1" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="no2">b-----f</label>
+                        <input type="text" class="form-control" id="no2" name="no2" value="@Model.no2" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="no3">h</label>
+                        <input type="text" class="form-control" id="no3" name="no3" value="@Model.no3" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tot">Total</label>
+                        <input type="text" class="form-control" id="tot" name="tot" value="@Model.tot" disabled />
+                    </div>
+
+                    <button type="submit" class="btn btn-info" id="kwadrat" value="kwadrat" name="calculate">kwadrat</button>
+                    <button type="submit" class="btn btn-danger" id="trójkąt" value="trójkąt" name="calculate">trójkąt</button>
+                    <button type="submit" class="btn btn-warning" id="prostokąt" value="prostokąt" name="calculate">prostokąt</button>
+                    <button type="submit" class="btn btn-success" id="koło" value="koło" name="calculate">koło</button>
+                    <button type="submit" class="btn btn-info" id="trapez" value="trapez" name="calculate">trapez</button>
+                    <button type="submit" class="btn btn-danger" id="równoległobok" value="równoległobok" name="calculate">równoległobok</button>
+                    <button type="submit" class="btn btn-warning" id="romb" value="romb" name="calculate">romb</button>
+                }
+
+
+            </div>
+
+        </body>
+    </div>
+</div>
+</html>
+
